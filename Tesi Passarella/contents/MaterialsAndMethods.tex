@@ -1,0 +1,52 @@
+\chapter{Materials and Methods}
+
+In order to collect brake dust samples, the front wheels of the vehicle were first removed. Brake dust was then carefully collected from the brake calipers and discs of both of the front wheels using a clean brush. The collected dust from each front wheel was then transferred into a labeled test tube. This process was repeated for the rear wheels, ensuring that the brake dust from each rear wheel was collected and stored in separate labeled test tubes.\\
+This means that each test tube contained brake dust from 2 wheels at a time. \\
+As a result, a total of 10 samples, 5 from the front and 5 from the rear, were collected and were given the following names: Panda Ant and Post, 500X Ant and Post, 500L Ant and Post, Ypsilon Ant and Post, Corolla Ant and Post.
+
+\section{Powder X-Ray Diffraction (PXRD)}
+
+Initially, the collected powders were analyzed using Powder X-Ray Diffraction (PXRD) with a PXRD MINIFLEX 600 diffractometer to better understand the main mineral phases present. \\
+Each sample was hand-ground using an agate mortar and then placed on a glass PXRD sample holder. \\
+The only sample that was not included is the Corolla Post, due to the insufficient amount of powder for the needs of the measurement instrument.\\
+The analyses were performed in a range between 3 and 80° $2\Theta$ with 0.020° step and 1.0 deg/min speed and then each diffractogram was elaborated using the “EVA” software.
+
+\section{Scanning Electron Microscopy with Energy Dispersive X-ray Spectroscopy (SEM-EDX)}
+
+The second part of the characterization was performed by using the Scanning Electron Microscope (SEM VEGA TESCAN) to obtain semi-quantitative standardless chemical information and collect morphometric data on the particles. \\
+The samples were prepared by positioning the SEM Al-stubs close to the sample containing tube and the brake powder was dry dispersed onto the stubs by blowing a gentle air flux within the tube to promote homogeneous dispersion of particles. The stubs were finally C-coated for the analysis. \\
+The samples were observed in SEM-SE and SEM-BSE modes to obtain reliable information on both their morphology and chemistry. \\
+For the chemical and dimensional analyses, the SEM was set at a voltage of 30 keV, with z parameter and working distance at 15 mm. For the morphological analyses, the working distance was set at 5 mm. \\
+The most representative particles of the sample were chosen for the morphological analyses.\\
+The EDXS spectra were collected from 10 spots in each of the 10 analyzed areas of the 10 samples, resulting in 100 spectra per sample and a total of 1000 spectra.
+These analyses were useful to understand the main elements present in the sample and to compare them with the mineral phases found in the PXRD analyses. \\
+
+From the same SEM-BSE images used for the chemical analyses, dimensional analyses were also performed using the software “ImageJ”. \\
+By making the image binary, the software can identify the particles present and calculate their diameters. \\
+For the diameter measurement, the software uses the “Feret” diameter, which is defined as the statistical diameter representing the mean value of distances between pairs of parallel tangents to a projected outline of particles \cite{wang}. \\
+It is generally used for analysis of particles to apply the projection of a 3D object on a 2D plane. \\
+The calculated measurements were then used to generate a size distribution histogram employing the matplotlib Python library. The analysis focused on particles with diameters smaller than 15 µm due to their potential health risk \cite{epaHealthEnvironmental}. \\
+For the size distribution histogram, the diameter range on the x-axis was set from 0 to 15 µm to focus on particles cited before. The number of bins in the histogram was chosen arbitrarily as 20 for better visualization of the data. \\
+The y-axis represents the absolute frequency , which is the number of particles observed within each diameter range. \\
+It is important to note that the number of particles in each sample might vary. This is because the SEM-BSE images were captured randomly and the samples themselves likely have inherent heterogeneity. \\
+
+The chemical information obtain from SEM-EDX analysis was also analyzed using the matplotlib Python library. The analysis focused on detecting the presence of heavy metals within the samples. \\
+Each spectra (100 for each sample) was examined to count the number of times specific heavy metal was detected. \\
+The result was a grouped bar chart for each car, visualizing the presence of the main heavy metals identified with SEM-EDX. This allowed for a sample-by-sample comparison of the heavy metals content. \\
+
+\section{Dissolution Test and Inductively Coupled Plasma (ICP)}
+
+The third part of the experiment was the dissolution test using simulated biofluid. This technique is used to test the possible reaction of the particles present in the samples within a biological environment. The biofluid used in this experiment was a saline solution ($0.9\%$ NaCl) \cite{innes2021simulated} with a pH of 7.4, mimicking pH of blood plasma \cite{atherton2009acid}. \\
+The samples used for the test were from the 3 car types: Panda Ant (combustion engine), Ypsilon Ant (LPG car) and Corolla Ant (hybrid car). The decision to use only front brake powders was based on the factor that they typically generate more particles compared to rear brakes and contribute more significantly to overall brake powders emissions due to their role in deceleration. \\
+The dissolution test was conducted in an orbital shaker incubator at a temperature of 39 °C to simulate physiological conditions \cite{rzechorzek2022daily}. \\
+For each sample, 2 mg of brake powders were used for each sample and dissolved in 2 ml of saline solution \cite{zhang2022hpmc}, the decision to use 2 mg of powders was made to ensure consistency across the samples, mainly due to the lower amount of material available for the sample Corolla Ant \\
+The test was performed at six different time points: $\text{t}_{0.5}$, $\text{t}_{1}$, $\text{t}_{12}$, $\text{t}_{24}$, $\text{t}_{48}$ and $\text{t}_{168}$. At each time-point, the sample solution was removed and placed in another tube for ICP analysis. This analysis focused on the amount of Fe released into the liquid over time.
+
+\section{Atomic Resolution Scanning Transmission Electron Microscopy (AR-STEM)}
+
+The fourth part of the experiment was the characterization using Atomic Resolution Scanning Transmission Electron Microscopy (AR STEM) Jeol, ARM 200 CF. \\
+STEM analysis was performed on both pre-interaction and post-interaction samples from Panda Ant, Ypsilon Ant and Corolla Ant used for the dissolution test.\\
+Pre-interaction samples were rinsed with distilled water to remove contaminants and then placed in an ultrasonication bath for 10 minutes at 40°C to dislodge weakly attached particles. After this, 8 drops of sample was deposited onto a TEM grid for analysis. \\
+For the post-interaction samples, only the solution from the $\text{t}_{168}$ time point (longest interaction time) was used for STEM analysis. This solution was first centrifuged for 5 minutes at 5000 RPM to separate the remaining brake particles from the liquid phase. The resulting saline solution was collected for ICP analysis. Following this, the particles were subjected to an ultrasonic bath for 10 minutes at 40°C. Finally, 8 drops of the prepared sample suspension was deposited onto a TEM grid for analysis, following the same procedure as the pre-interaction samples. \\
+For TEM analyses, a voltage of 80 kV was used. Both low-resolution and high-resolution images were captured for each sample, allowing for initial observation and detailed examination of specific features within the particles. EDXS analysis was then performed on 10 particles from each sample to identify the main elements present. The goal was to compare these findings with the results obtained from PXRD and SEM-EDX analyses, looking for correlations between the different techniques.\\ Additionally, an elemental map was acquired for the most representative particles, visually depicting the distribution of the most abundant elements within that particulate particle.\\
+At the end, Dual Electron Energy Loss Spectroscopy (Dual EELS) was performed on 5 particles per sample to investigate the valence state of Fe.
